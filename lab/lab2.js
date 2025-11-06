@@ -70,3 +70,43 @@ console.log(productCard);
 
 //bai 5
 
+const width = 100;
+const height = 200;
+const color = "red";
+
+const rectangle = {
+  width,
+  height,
+  color,
+
+  calculateArea() {
+    return this.width * this.height;
+  },
+  describe() {
+    return `Rectangle ${this.width}x${this.height}, color: ${this.color}`;
+  },
+};
+
+
+//bai6
+
+
+const env = "production";
+const version = "v2";
+const features = ["auth", "payment", "notification"];
+
+const config = {
+  [`api_${env}_${version}`]: `https://api.example.com/${env}/${version}`,
+
+  ...features.reduce((acc, feature) => {
+    acc[`feature_${feature}`] = true;
+    return acc;
+  }, {}),
+
+  [`get${env.charAt(0).toUpperCase() + env.slice(1)}Config`]() {
+    return `Current environment: ${env}, version: ${version}`;
+  },
+};
+
+console.log(config);
+console.log(config.getProductionConfig());
