@@ -1,0 +1,25 @@
+{
+  "name": "ecmascript-fall25-main",
+  "version": "1.0.0",
+  "description": "Lập trình ECMAScript là môn học cung cấp các kiến thức về chuẩn ECMAScript 6. Trong khóa học này, bạn sẽ đi sâu vào những thay đổi mới nhất được thực hiện đối với ngôn ngữ lập trình JavaScript với ECMAScript đặc biệt là phiên bản ECMAScript 2015 (ES6).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanban22/Web501-PH58711-Nguyen-Van-Ban.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanban22/Web501-PH58711-Nguyen-Van-Ban/issues"
+  },
+  "homepage": "https://github.com/vanban22/Web501-PH58711-Nguyen-Van-Ban#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
+  }
+}

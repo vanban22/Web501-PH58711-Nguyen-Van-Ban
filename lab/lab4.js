@@ -86,3 +86,23 @@ fetchMultipleData(apiUrls).then(users => {
 }).catch(error => {
   console.error("One of the fetches failed:", error);
 });
+
+//bai4
+
+async function processOrder(orderId) {
+  const order = await getOrder(orderId);
+  const user = await getUser(order.userId);
+  const products = await getProducts(order.productIds);
+  return { order, user, products };
+}
+
+
+async function safeApiCall(apiFunction, ...args) {
+  try {
+    const result = await apiFunction(...args);
+    return { success: true, data: result, error: null };
+  } catch (error) {
+    console.error(`API Call failed for ${apiFunction.name}:`, error);
+    return { success: false, data: null, error: error.message || "Unknown error" };
+  }
+}
